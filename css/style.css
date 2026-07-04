@@ -1,10 +1,25 @@
 body{
-
-background: #ffffff;
-
-font-family: Arial, Helvetica, sans-serif;
-
+background-color: #fffffa;
+font-family:'Inter',sans-serif;
+color:#1F2937;
 margin: 0;
-
 padding: 0;
+}
+
+header{
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    margin-top: 15px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
 }
