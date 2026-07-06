@@ -1,5 +1,5 @@
 body{
-background-color: #f7f7f7;
+background-color: #f3f3f3;
 font-family:'Montserrat',sans-serif;
 color:#1F2937;
 margin: 0;
@@ -7,32 +7,99 @@ padding: 0;
 }
 
 header{
-    background-color: #003366;
+    background-color: #084298;
     color: white;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
     font-family: 'Montserrat', sans-serif;
+    
+}
+
+header h1{
+    margin: 0;
+    font-size: 30px;
 }
 
 nav{
-    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+
 }
 
 nav a{
     color: white;
     text-decoration: none;
-    margin-right: 20px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .service-card {
     background-color: rgb(255, 255, 255);
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 2px solid #003366;
-    border-radius: 8px;
+    width: 230px;
+    padding: 22px;
+    border: 2px solid #084298;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#services h2{
+    text-align: center;
+    padding: 10px;
 }
 
 #hero {
+    background: #F8F9FA;
     text-align: center;
-    padding: 60px;
+    padding: 80px 20px;
+}
+
+#hero h2{
+    font-size: 30px;
+}
+
+#hero p {
+    font-size: 16px;
+    color: #555;
+}
+
+.services-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    
+}
+
+section{
+    padding:40px 20px;
+}
+
+#contact {
+    background: #F8F9FA;
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+
+    background:#084298;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center ;
+    padding:5px;
+    height: 20px;
+    font-size: 10px;
+    
+
 }
