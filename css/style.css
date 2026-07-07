@@ -14,12 +14,37 @@ header{
     align-items: center;
     padding: 15px 20px;
     font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0px;
     
 }
 
 header h1{
     margin: 0;
     font-size: 30px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img{
+    width: 55px;
+    height: 55px;
+}
+
+.logo-text h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+.logo-text p{
+    margin: 0;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 nav{
@@ -57,18 +82,25 @@ nav a{
 }
 
 #hero {
-    background: #F8F9FA;
+
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     text-align: center;
     padding: 80px 20px;
+    height: 300px;
 }
 
 #hero h2{
     font-size: 30px;
+    color: #ffffff;
 }
 
 #hero p {
     font-size: 16px;
-    color: #555;
+    color: #d6d6d6;
 }
 
 .services-container{
