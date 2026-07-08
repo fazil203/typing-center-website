@@ -15,7 +15,9 @@ header{
     padding: 15px 20px;
     font-family: 'Montserrat', sans-serif;
     position: sticky;
-    top: 0px;
+    top: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,.10);
+    z-index: 1000;
     
 }
 
@@ -59,48 +61,102 @@ nav a{
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    position: relative;
+    transition: .3s;
 }
 
-.service-card {
-    background-color: rgb(255, 255, 255);
-    width: 230px;
-    padding: 22px;
-    border: 2px solid #084298;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover{
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-#services h2{
-    text-align: center;
-    padding: 10px;
+nav a:hover{
+    color: #dbb04d;
 }
 
 #hero {
 
-    background-image: url("../images/hero.jpg");
+    background: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.80)),url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     text-align: center;
-    padding: 80px 20px;
-    height: 300px;
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.hero-tag{
+    display: inline-block;
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 #hero h2{
-    font-size: 30px;
-    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
 }
 
 #hero p {
-    font-size: 16px;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
     color: #d6d6d6;
+}
+
+
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.btn-primary{
+    background-color: #f0f0f0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 120px;
+    
+
+}
+
+.btn-primary:hover{
+    background-color: #0b5ed7;
+    color: white;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.btn-secondary{
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 120px;
+}
+
+.btn-secondary:hover{
+    background-color: white;
+    color: #084298;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 .services-container{
@@ -108,7 +164,73 @@ nav a{
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
+    align-items: center;
     
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 22px;
+    border: 2px solid #084298;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 230px;
+    color: white;
+    height: 260px;
+}
+.service-card h3{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 2px 8px 20px rgba(0,0,0,1);
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.service-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color:#FFD166;
+}
+
+.family-card{
+    background: linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.80)),url("../images/family.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.visit-card{
+    background: linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.80)),url("../images/visit.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.medical-card{
+    background: linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.80)),url("../images/medical.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.attestation-card{
+    background: linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.80)),url("../images/attestation.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#services h2{
+    text-align: center;
+    padding: 10px;
 }
 
 section{
