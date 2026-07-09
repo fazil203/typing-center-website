@@ -63,10 +63,27 @@ nav a{
     font-weight: bold;
     position: relative;
     transition: .3s;
+    position: relative;
 }
 
 nav a:hover{
     color: #dbb04d;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: width .3s ease;
+    background: #f3f3f3;
+    display: block;
+}
+
+nav a:hover::after{
+    width: 100%;
 }
 
 #hero {
@@ -235,6 +252,36 @@ nav a:hover{
 
 section{
     padding:40px 20px;
+}
+
+.why-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    gap: 25px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+#why h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.whyus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 230px;
+    background-color: rgb(255, 255, 255);;
+    padding: 22px;
+    border: 2px solid;
+    height: 260px;
+    text-align: center;
+    border-radius: 12px;
+    
 }
 
 #contact {
