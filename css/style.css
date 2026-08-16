@@ -21,7 +21,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 12px 30px;
     font-family: 'Montserrat', sans-serif;
     position: sticky;
     top: 0;
@@ -58,25 +58,31 @@ header h1{
     font-weight: bold;
 }
 
-nav{
-    display: flex;
-    gap: 30px;
-    margin: 0;
 
+nav {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 nav a{
-    color: var(--white);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
     position: relative;
-    transition: .3s;
+    transition: .3s ease;
     position: relative;
 }
 
 nav a:hover{
     color: var(--secondary-color);
+    transform: translateY(-1px);
 }
 
 nav a::after{
@@ -87,13 +93,17 @@ nav a::after{
     left: 0;
     bottom: -5px;
     transition: width .3s ease;
-    background: var(--background-color);
+    background: var(--primary-color);
     display: block;
 }
 
 nav a:hover::after{
     width: 100%;
 }
+.nav-header{
+    display: none;
+}
+
 
 #menuBtn {
     display: none;
@@ -103,8 +113,20 @@ nav a:hover::after{
 }
 
 #overlay {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1500;
 }
+
+
+
 
 #hero {
 
@@ -114,7 +136,7 @@ nav a:hover::after{
     background-repeat: no-repeat;
 
     text-align: center;
-    min-height:70vh;
+    min-height:60vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -126,27 +148,32 @@ nav a:hover::after{
     display: inline-block;
     background-color: rgba(255,255,255,0.15);
     color: var(--white);
-    padding: 8px 18px;
+    padding: 9px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    backdrop-filter: blur(5px);
 }
 
-#hero h2{
-    font-size: 40px;
+#hero h2 {
+    font-size: 48px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin: 15px 0 20px;
     color: var(--white);
+    max-width: 850px;
+    font-weight: 700;
 }
 
 #hero p {
     font-size: 18px;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     line-height: 1.7;
     color: var(--white);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -159,13 +186,14 @@ nav a:hover::after{
 
 .btn-primary{
     background-color: var(--white);
-    color: rgb(0, 0, 0);
+    color: var(--primary-color);
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 10px;
     font-weight: bold;
     transition: 0.3s;
-    width: 120px;
+    min-width: 120px;
+    text-align: center;
     
 
 }
@@ -183,10 +211,11 @@ nav a:hover::after{
     text-decoration: none;
     padding: 14px 28px;
     border: 2px solid white;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     transition: 0.3s;
-    width: 120px;
+    min-width: 120px;
+    text-align: center;
 }
 
 .btn-secondary:hover{
@@ -199,10 +228,10 @@ nav a:hover::after{
 .services-container{
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
     align-items: center;
-    padding: 25px;
+    padding: 35px 25px;
     background-color: var(--background-color);
     border-radius: 15px;
 
@@ -236,24 +265,26 @@ nav a:hover::after{
     justify-content: center;
     align-items: center;
     background-color: #f1f1f1;
-    padding: 22px;
+    padding: 25px;
     border: 2px solid var(--primary-color);
-    border-radius: 12px;
+    border-radius: 16px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 240px;
+    min-height: 260px;
     color: var(--white);
-    height: 260px;
+    
     
 }
 .service-card h3{
     color: var(--white);
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 26px;
     text-shadow: 2px 8px 20px rgba(0,0,0,1);
-    border: 1px solid;
-    padding: 10px;
+    border: 1px solid var(--white);
+    padding: 10px 14px;
     border-radius: 10px;
+    
 
 }
 
@@ -268,7 +299,7 @@ nav a:hover::after{
 
 .service-card:hover{
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
     border-color: var(--secondary-color);
 }
 
@@ -300,9 +331,12 @@ nav a:hover::after{
     background-repeat: no-repeat;
 }
 
-#services h2{
+#services h2 {
     text-align: center;
     padding: 10px;
+    margin: 0 0 25px;
+    font-size: 32px;
+    color: var(--primary-color);
 }
 
 section{
@@ -319,8 +353,8 @@ section{
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    padding: 25px;
-    gap: 25px;
+    padding: 35px 25px;
+    gap: 30px;
     background-color: var(--background-color);
     border-radius: 12px;
 }
@@ -328,6 +362,8 @@ section{
 #why h2{
     text-align: center;
     padding: 10px;
+    font-size: 32px;
+    color: var(--primary-color);
 }
 
 .whyus{
@@ -335,20 +371,88 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 230px;
+    width: 240px;
     background-color: var(--white);;
     padding: 22px;
-    border: 2px solid;
+    border: 2px solid var(--primary-color);
     min-height: 260px;
     text-align: center;
     border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     
+}
+
+.whyus h3 {
+
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.whyus p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.whyus:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--secondary-color);
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: var(--background-color);
+    padding: 25px 30px;
+    border-radius: 16px;
+}
+
+.contact-card {
+    width: 220px;
+    min-height: 130px;
+    padding: 20px;
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card h3 {
+    margin: 0 0 10px;
+    color: var(--primary-color);
+}
+
+.contact-card p {
+    margin: 0;
+}
+
+.contact-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--secondary-color);
 }
 
 #contact {
     background: var(--white);
     text-align: center;
-    padding: 10px;
+    padding: 50px 20px;
+}
+
+#contact h2 {
+    margin: 0 0 25px;
+    font-size: 32px;
+    color: var(--primary-color);
 }
 
 footer{
@@ -364,6 +468,7 @@ footer{
     font-size: 10px;
     
 }
+
 
 @media (max-width:768px){
 
@@ -417,9 +522,6 @@ footer{
         color: var(--text-color);
         font-size: 24px;
         cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 20px;
         z-index: 2100;
     }
 
@@ -467,6 +569,21 @@ footer{
         display: block;
         
     }
+    .nav-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .nav-header span {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
 
     .hero-buttons{
         flex-wrap: wrap;
@@ -482,7 +599,8 @@ footer{
     }
 
     #overlay.active {
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 }
 
