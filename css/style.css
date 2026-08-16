@@ -95,6 +95,17 @@ nav a:hover::after{
     width: 100%;
 }
 
+#menuBtn {
+    display: none;
+}
+#closeBtn{
+    display: none;
+}
+
+#overlay {
+    display: none;
+}
+
 #hero {
 
     background: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.80)),url("../images/hero.jpg");
@@ -355,37 +366,128 @@ footer{
 }
 
 @media (max-width:768px){
+
     #hero h2{
-    font-size: 28px;
+        font-size: 28px;
     }
+
     #hero p{
         font-size: 16px;
     }
+
     .hero-tag{
         font-size: 10px;
     }
-    nav a{
-        font-size: 12px;
-    }
+
     .logo img{
         width: 40px;
         height: 40px;
     }
+
     .logo-text h1{
         font-size: 22px;
     }
+
     .logo-text p{
-    font-size: 14px;
+        font-size: 14px;
     }
-    header{
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 18px;
+
+    header {
+        flex-wrap: nowrap;
+        position: sticky;
         padding: 10px 15px;
+        z-index: 3000;
     }
+
+    /* Menu button */
+
+    #menuBtn{
+        display: block;
+        background: transparent;
+        border: none;
+        color: var(--white);
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    #closeBtn {
+        display: block;
+        background: transparent;
+        border: none;
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2100;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 80px 30px 30px;
+        box-sizing: border-box;
+        z-index: 2000;
+    }
+
+    nav.active{
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 18px 0;
+        color: var(--text-color);
+        font-size: 16px;
+        text-align: left;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    nav a::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        bottom: -5px;
+        transition: width .3s ease;
+        background: var(--primary-color);
+        display: block;
+        
+    }
+
     .hero-buttons{
         flex-wrap: wrap;
     }
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1500;
+    }
 
+    #overlay.active {
+        display: block;
+    }
 }
+
+
+
+
+
 
