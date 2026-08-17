@@ -5,7 +5,7 @@ const nav = document.querySelector("nav");
 const closeBtn = document.querySelector("#closeBtn");
 const overlay = document.querySelector("#overlay");
 const navLinks = document.querySelectorAll("nav a");
-const logoHome = document.querySelector("Al Yaseen Logo");
+const serviceButtons = document.querySelectorAll(".service-btn");
 
 function closeMenu() {
     nav.classList.remove("active");
@@ -31,6 +31,23 @@ navLinks.forEach(function(link) {
     });
 });
 
-logoHome.addEventListener("click",function(){
-    
-})
+serviceButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const service = button.dataset.service;
+
+        const message = `Hello AL YASEEN, I am interested in ${service}. Please provide me with more information.`;
+
+        const encodedMessage = encodeURIComponent(message);
+
+        const whatsappUrl = `https://wa.me/971567863568?text=${encodedMessage}`;
+
+        console.log(whatsappUrl);
+
+        console.log(encodedMessage);
+
+
+    });
+
+});

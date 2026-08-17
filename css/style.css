@@ -339,6 +339,23 @@ nav a:hover::after{
     color: var(--primary-color);
 }
 
+.service-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
 section{
     padding:40px 20px;
 }
@@ -428,6 +445,12 @@ section{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.contact-card i {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
 .contact-card h3 {
     margin: 0 0 10px;
     color: var(--primary-color);
@@ -455,18 +478,17 @@ section{
     color: var(--primary-color);
 }
 
-footer{
-
-    background: var(--primary-color);
-    color:var(--white);
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align:center ;
-    padding:5px;
-    height: 20px;
-    font-size: 10px;
-    
+    text-align: center;
+    padding: 20px;
+    min-height: 60px;
+    font-size: 13px;
+    box-sizing: border-box;
 }
 
 
@@ -602,6 +624,17 @@ footer{
         opacity: 1;
         visibility: visible;
     }
+
+    .contact-container {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
 
 
