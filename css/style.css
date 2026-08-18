@@ -478,6 +478,67 @@ section{
     color: var(--primary-color);
 }
 
+
+.enquiry-form{
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.enquiry-form h3 {
+    margin: 0 0 25px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+#enquiryForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#enquiryForm input,
+#enquiryForm textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#enquiryForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#enquiryForm input:focus,
+#enquiryForm textarea:focus {
+    border-color: var(--primary-color);
+}
+
+#enquiryForm button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#enquiryForm button:hover {
+    background-color: var(--secondary-color);
+}
+
 footer {
     background-color: var(--primary-color);
     color: var(--white);
